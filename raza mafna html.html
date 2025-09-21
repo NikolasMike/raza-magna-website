@@ -1,24 +1,185 @@
-<!doctype html>
-<html lang=es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-	<meta name="referrer" content="no-referrer">
-    <title>Raza-Magna</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raza Magna - Banda de Heavy Metal</title>
 </head>
-
 <body>
-  <h1>Raza Magna</h1>
-  <p>Somos Raza Magna, una banda de heavy metal nacida en 2011 de la pasión por crear música poderosa, técnica y sin compromisos.
-  Fundada por Adolfo Elizondo (guitarra) y Juan José Aragón (bajo), 
-  hoy somos también Vampel en la voz y Mike Carrión en la batería, 
-  unidos por la misma fuerza que nos mueve desde el primer acorde.</p>
-  <p>En 2025 lanzamos nuestro primer álbum homónimo, una declaración de identidad forjada en riffs afilados, 
-    solos que hablan por sí mismos y una voz que domina con intensidad y versatilidad.</p>
-  <p>No necesitamos un escenario para hacer sentir el metal; nuestra batalla se libra en cada nota,
-     en cada lanzamiento digital, llevando nuestra música directo a quienes entienden el verdadero poder del roc</p>
+    <!-- Header/Navegación -->
+    <header>
+        <h1>RAZA MAGNA</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#biografia">Biografía</a></li>
+                <li><a href="#musica">Música</a></li>
+                <li><a href="#integrantes">Integrantes</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Principal -->
+    <main>
+        <!-- Hero/Inicio -->
+        <section id="inicio">
+            <h2>Heavy metal desde Costa Rica</h2>
+            <p>Fandada en 2011</p>
+            <!-- Aquí pienso poner una imagen de la banda -->
+            <img src="images/Raza-hero.png" alt="Raza Magana portada" width="600">
+        </section>
+
+        <!-- Biografía -->
+        <section id="biografia">
+            <h2>Sobre nosotros</h2>
+            <p>Somos Raza Magna, una banda de heavy metal nacida en 2011 de la pasión por crear música poderosa, 
+              técnica y sin compromisos. Fundada por Adolfo Elizondo (guitarra) y Juan José Aragón (bajo),
+               hoy somos también Vampel en la voz y Mike Carrión en la batería, 
+               unidos por la misma fuerza que nos mueve desde el primer acorde.</p>
+            
+            <p>En 2025 lanzamos nuestro primer álbum homónimo, 
+              una declaración de identidad forjada en riffs afilados,
+               solos que hablan por sí mismos y una voz que domina con intensidad y versatilidad..</p>
+        </section>
+
+        <!-- Música -->
+        <section id="musica">
+            <h2>Nuestra Música</h2>
+            <h3>Álbum: Raza Magna (2025)</h3>
+            <ol>
+                <li>Intron</li>
+                <li>Poder Oculto</li>
+                <li>Despertando a la vida</li>
+                <li>Reflexión</li>
+                <li>Rock N Roll</li>
+                <li>Polaris</li>
+                <li>Indigente</li>
+                <li>La tormenta</li>
+            </ol>
+            
+            <h3>Singles</h3>
+            <ul>
+                <li>"Poder Oculto" (2024)</li>
+                <li>"Indigente" (2024)</li>
+            </ul>
+        </section>
+
+        <!-- Integrantes -->
+        <section id="integrantes">
+            <h2>La Cofradia</h2>
+            
+            <div>
+                <h3>Adolfo Elizondo</a></h3>
+                <p><strong>Lider y Guitarra</strong></p>
+                <p>El lider de la banda y fundador, sus riffs mezclan creatividad melodica con agresividad tecnica.</p>
+                <p><a href="adolfo.elizondo.html">Ver perfil completo →</a></p>
+            </div>
+
+            <div>
+                <h3>Juan "Jota" Aragón</a></h3>
+                <p><strong>Bajo</strong></p>
+                <p>Aparte de sus lineas delirantes de bajo, es un excelente compositor </p>
+                <p><a href="jota.aragón.html">Ver perfil completo →</a></p>
+            </div>
+
+            <div>
+                <h3>Mike Carrión</a></h3>
+                <p><strong>Batería</strong></p>
+                <p>Con uan mezcla de ritmos y de peculiaridades, fomenta variedad</p>
+                <p><a href="mike.carrion.html">Ver perfil completo →</a></p>
+            </div>
+
+            <div>
+                <h3>David "Vampel" Mora</h3>
+                <p><strong>Voz</strong></p>
+                <p>Aunque tambien brinda poder y energia, la voz de Vampel tambien puede crear sentimiento con melodia</p>
+                <p><a href="vampel.mora.html">Ver perfil completo →</a></p>
+            </div>
+        </section>
+
+        <!-- Videos/Galería -->
+        <section id="media">
+            <h2>Videos y Fotos</h2>
+            
+            <h3>Último Video</h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=47uD6FcuNAQ&list=RD47uD6FcuNAQ&start_radio=1">Indigente</a></li>
+            </ul>
+
+            <h3>Galería</h3>
+            <p>Algunas imágenes mas:</p>
+            <!-- Aquí luego agrego mas  -->
+            <img src="images/Raza-logo.jpeg" alt="logo" width="300">
+            
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto">
+            <h2>Únete al clero</h2>
+            
+            <form action="#" method="post">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto">
+                        <option value="colaboracion">Colaboración musical</option>
+                        <option value="produccion">Producción/Grabación</option>
+                        <option value="prensa">Medios/Prensa</option>
+                        <option value="fan">Mensaje de fan</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Te escuchamos..."></textarea>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Quiero recibir noticias de la banda</label>
+                </div>
+
+                <div>
+                    <p>¿Cuál es tu género favorito?</p>
+                    <input type="radio" id="heavy" name="genero" value="heavy">
+                    <label for="heavy">Heavy Metal</label>
+
+                    <input type="radio" id="death" name="genero" value="death">
+                    <label for="death">Death Metal</label>
+
+                    <input type="radio" id="black" name="genero" value="black">
+                    <label for="black">Black Metal</label>
+
+                    <input type="radio" id="power" name="genero" value="power">
+                    <label for="power">Power Metal</label>
+                </div>
+
+                <button type="submit">¡Enviar Mensaje!</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Raza Magna. Todos los derechos reservados.</p>
+        <p>Síguenos en:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/p/Raza-Magna-61569363782268/">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@RazaMagnaOficial">YouTube</a></li>
+            <li><a href="https://open.spotify.com/intl-es/artist/1V3VrQi4Gl3TM0EDzn6sMy?si=at_62BwgQXa4UpDC19KrlA">Spotify</a></li>
+        </ul>
+    </footer>
 </body>
-
-
-
 </html>
