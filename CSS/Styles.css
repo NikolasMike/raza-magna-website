@@ -1,14 +1,56 @@
    body { 
     text-align: center;
 } 
-   h1  {
-     text-align: left;
+
+/*titulo retorna a inicio */
+h1 {
+    text-align: left;
 }
 
- 
+h1 a {
+    color: white; /* o el color que tenía tu h1 */
+    text-decoration: none; /* quita el subrayado */
+}
+
+h1 a:visited {
+    color: white; /* evita que se ponga morado después de hacer clic */
+}
+
+h1 a:hover {
+    opacity: 0.9; /* opcional: efecto sutil al pasar el mouse */
+}
+
+/*navs arriba derecha */
+.nav {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #d4af37; /* Color dorado al pasar el mouse */
+}
 
 
-/* Imagen de fon  do para toda la página */
+/* Imagen de fondo para toda la página */
 body {
     background-image: url("../images/Raza-background.png"); 
     background-size: cover; /* La imagen cubre toda la pantalla */
@@ -45,13 +87,27 @@ a {
 
 /* Enlaces al pasar el mouse */
 a:hover {
-    color: #cccccc;
+    color: #ffba4ad8;
+}
+
+a:active {
+  color: rgb(255, 178, 84);
+}
+
+a:visited {
+  color: rgb(246, 196, 246);
+  border-bottom: 1px solid rgb(247, 184, 247);
 }
 
 /* Listas en blanco */
 ul, ol, li {
     color: white;
-    list-style-position: outside;
+    list-style-position: inside;
+    
+    }
+
+textarea{
+background-color: black !important; 
 }
 
 
@@ -66,3 +122,4 @@ body::before {
     background-color: rgba(0, 0, 0, 0.4); /* Overlay semi-transparente */
     z-index: -1; /* Detrás del contenido */
 }
+
