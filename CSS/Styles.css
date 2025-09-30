@@ -1,4 +1,14 @@
-/* Imagen de fondo para toda la página */
+   body { 
+    text-align: center;
+} 
+   h1  {
+     text-align: left;
+}
+
+ 
+
+
+/* Imagen de fon  do para toda la página */
 body {
     background-image: url("../images/Raza-background.png"); 
     background-size: cover; /* La imagen cubre toda la pantalla */
@@ -27,7 +37,7 @@ p {
     color: white;
 }
 
-/* Enlaces en blanco (puedes cambiar el color si prefieres) */
+/* Enlaces en blanco (cambiar luego) */
 a {
     color: white;
     text-decoration: underline;
@@ -41,7 +51,9 @@ a:hover {
 /* Listas en blanco */
 ul, ol, li {
     color: white;
+    list-style-position: outside;
 }
+
 
 /* Opcional: agregar overlay oscuro para mejor legibilidad del texto */
 body::before {
