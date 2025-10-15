@@ -1,123 +1,45 @@
-   body { 
-    text-align: center;
-    font-size: 2em;
-} 
-
-/*titulo retorna a inicio */
-h1 {
-    text-align: left;
-}
-
-h1 a {
-    color: white; /* o el color que tenía tu h1 */
-    text-decoration: none; /* quita el subrayado */
-}
-
-h1 a:visited {
-    color: white; /* evita que se ponga morado después de hacer clic */
-}
-
-h1 a:hover {
-    opacity: 0.9; /* opcional: efecto sutil al pasar el mouse */
-}
-
-/*navs arriba derecha */
-.nav {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    
-}
-
-.nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 20px; /* Espacio entre elementos */
-    
-}
-
-.nav li {
-    display: inline-block;
-}
-
-.nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-}
-
-.nav a:hover {
-    color: #d4af37; /* Color dorado al pasar el mouse */
-}
-
-.nav a:visited {
-    color: white; /* evita que se ponga morado después de hacer clic */
-}
-
-/* Imagen de fondo para toda la página */
-body {
-    background-image: url("../images/Raza-background.png"); 
-    background-size: cover; /* La imagen cubre toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repetir la imagen */
-    background-attachment: fixed; /* Fondo fijo al hacer scroll */
-    background-color: #0f1419; /* Color de respaldo si no carga la imagen */
-    color: white; /* Texto blanco por defecto */
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Asegurar que cubra toda la altura */
-}
-
-/* Asegurar que todos los elementos de texto sean blancos */
+/* ============================================
+   RESET Y VARIABLES
+   ============================================ */
 * {
-    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Títulos en blanco */
-h1, h2, h3, h4, h5, h6 {
-    color: white;
+:root {
+    --color-primary: #d4af37;
+    --color-secondary: #ffba4a;
+    --color-bg: #0f1419;
+    --color-text: #ffffff;
+    --color-text-muted: #b8b8b8;
+    --color-overlay: rgba(0, 0, 0, 0.7);
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    --max-width: 1200px;
+    --transition: all 0.3s ease;
 }
 
-/* Párrafos en blanco */
-p {
-    color: white;
+/* ============================================
+   ESTILOS GENERALES
+   ============================================ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg);
+    background-image: url("../images/Raza-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
 }
 
-/* Enlaces en blanco (cambiar luego) */
-a {
-    color: white;
-    text-decoration: underline;
-}
-
-/* Enlaces al pasar el mouse */
-a:hover {
-    color: #ffba4ad8;
-}
-
-a:active {
-  color: rgb(255, 178, 84);
-}
-
-a:visited {
-  color: rgb(246, 196, 246);
-  border-bottom: 1px solid rgb(247, 184, 247);
-}
-
-/* Listas en blanco */
-ul, ol, li {
-    color: white;
-    list-style-position: inside;
-    
-    }
-
-textarea{
-background-color: black !important; 
-}
-
-
-/* Opcional: agregar overlay oscuro para mejor legibilidad del texto */
 body::before {
     content: '';
     position: fixed;
@@ -125,32 +47,508 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay semi-transparente */
-    z-index: -1; /* Detrás del contenido */
+    background-color: var(--color-overlay);
+    z-index: -1;
 }
 
-.submit {
-    background-color: black;
-    }
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
 
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
 
-    .social-links {
+p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-muted);
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+a:visited {
+    color: rgb(246, 196, 246);
+}
+
+/* ============================================
+   HEADER Y NAVEGACIÓN
+   ============================================ */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(15, 20, 25, 0.95);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-sm) var(--spacing-md);
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo a {
+    color: var(--color-text);
+}
+
+.logo a:hover {
+    color: var(--color-text);
+    text-shadow: 0 0 20px var(--color-primary);
+}
+
+.logo a:visited {
+    color: var(--color-text);
+}
+
+nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+    color: var(--color-text);
+}
+
+nav a:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--color-primary);
+}
+
+nav a:visited {
+    color: var(--color-text);
+}
+
+/* ============================================
+   SECCIONES PRINCIPALES
+   ============================================ */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+section {
+    padding: var(--spacing-lg) 0;
+    scroll-margin-top: 100px;
+}
+
+section:not(:last-child) {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Ocultar los hr ya que usamos border-bottom */
+hr {
+    display: none;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+#inicio {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+}
+
+#inicio h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#inicio p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+#inicio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+}
+
+#inicio img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 50px rgba(212, 175, 55, 0.3);
+}
+
+/* ============================================
+   BIOGRAFÍA
+   ============================================ */
+#biografia p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+/* ============================================
+   MÚSICA
+   ============================================ */
+#musica {
+    text-align: center;
+}
+
+#musica h3 {
+    color: var(--color-primary);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+#musica ol, 
+#musica ul {
+    max-width: 600px;
+    margin: var(--spacing-sm) auto;
+    padding-left: var(--spacing-md);
+    text-align: left;
+    list-style-position: inside;
+}
+
+#musica li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+/* ============================================
+   INTEGRANTES
+   ============================================ */
+#integrantes {
+    text-align: center;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.member-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.member-card:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.member-card h3 {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+}
+
+.member-card strong {
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.member-card p {
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.member-card a {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    padding: 0.5rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border-radius: 4px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.member-card a:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+    color: var(--color-bg);
+}
+
+/* ============================================
+   MEDIA
+   ============================================ */
+#media {
+    text-align: center;
+}
+
+#media h3 {
+    color: var(--color-primary);
+    margin-top: var(--spacing-md);
+}
+
+#media ul {
+    list-style: none;
+    padding: 0;
+}
+
+#media li a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: rgba(212, 175, 55, 0.2);
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: var(--spacing-sm);
+    transition: var(--transition);
+}
+
+#media li a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    transform: scale(1.05);
+}
+
+#media img {
+    margin-top: var(--spacing-md);
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   FORMULARIO DE CONTACTO
+   ============================================ */
+#contacto {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+legend {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 var(--spacing-sm);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 4px;
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    display: inline;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background-color: rgba(15, 20, 25, 0.95);
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+    border-top: 2px solid var(--color-primary);
+    margin-top: var(--spacing-xl);
+}
+
+footer p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-muted);
+}
+
+.social-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
 }
 
 .social-links a {
-    text-decoration: none;
+    transition: var(--transition);
 }
 
 .social-links img {
     width: 50px;
     height: 50px;
-    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+    transition: var(--transition);
 }
 
-.social-links img:hover {
-    transform: scale(1.2);
+.social-links a:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+
+    nav ul {
+        gap: var(--spacing-sm);
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    main {
+        padding: var(--spacing-sm);
+    }
+
+    section {
+        padding: var(--spacing-md) 0;
+    }
+
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #biografia p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+    }
 }

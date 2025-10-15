@@ -3,63 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raza Magna - Banda de Heavy Metal</title>
-
+    <meta name="description" content="Raza Magna - Banda de Heavy Metal desde Costa Rica. Descubre nuestra música, historia y próximos conciertos.">
+    <meta name="keywords" content="Raza Magna, heavy metal, Costa Rica, banda, música, metal">
+    <meta name="author" content="Raza Magna">
+    <title>Raza Magna - Heavy Metal desde Costa Rica</title>
     <link rel="stylesheet" href="CSS/Styles.css">
 </head>
  
 <body>
     <!-- Header/Navegación -->
     <header>
-        <h1><a href="#inicio">Raza Magna</a></h1>
-        <nav class="nav">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#biografia">Biografía</a></li>
-                <li><a href="#musica">Música</a></li>
-                <li><a href="#integrantes">Integrantes</a></li>
-                <li><a href="#media">Media</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1 class="logo"><a href="#inicio">Raza Magna</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#biografia">Biografía</a></li>
+                    <li><a href="#musica">Música</a></li>
+                    <li><a href="#integrantes">Integrantes</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-<hr>
-    <!-- Sección Principal -->
+
+    <!-- Contenido Principal -->
     <main>
         <!-- Hero/Inicio -->
         <section id="inicio">
-            <h2>Heavy metal desde Costa Rica</h2>
-            <p>Fandada en 2011</p>
-            <!-- Aquí pienso poner una imagen de la banda -->
-            <img src="images/Raza-hero.png" alt="Raza Magana portada" width="600">
+            <h2>Heavy Metal desde Costa Rica</h2>
+            <p>Fundada en 2011</p>
+            <img src="images/Raza-hero.png" alt="Raza Magna - Banda de Heavy Metal" width="600">
         </section>
 
         <!-- Biografía -->
         <section id="biografia">
-            <h2>Sobre nosotros</h2>
-            <p>Somos Raza Magna, una banda de heavy metal nacida en 2011 de la pasión por crear música poderosa, 
-              técnica y sin compromisos. Fundada por Adolfo Elizondo (guitarra) y Juan José Aragón (bajo),
-               hoy somos también Vampel en la voz y Mike Carrión en la batería, 
-               unidos por la misma fuerza que nos mueve desde el primer acorde.</p>
+            <h2>Sobre Nosotros</h2>
+            <p>
+                Somos Raza Magna, una banda de heavy metal nacida en 2011 de la pasión por crear música poderosa, 
+                técnica y sin compromisos. Fundada por Adolfo Elizondo (guitarra) y Juan José Aragón (bajo),
+                hoy somos también Vampel en la voz y Mike Carrión en la batería, 
+                unidos por la misma fuerza que nos mueve desde el primer acorde.
+            </p>
             
-            <p>En 2025 lanzamos nuestro primer álbum homónimo, 
-              una declaración de identidad forjada en riffs afilados,
-               solos que hablan por sí mismos y una voz que domina con intensidad y versatilidad..</p>
+            <p>
+                En 2025 lanzamos nuestro primer álbum homónimo, 
+                una declaración de identidad forjada en riffs afilados,
+                solos que hablan por sí mismos y una voz que domina con intensidad y versatilidad.
+            </p>
         </section>
 
         <!-- Música -->
         <section id="musica">
             <h2>Nuestra Música</h2>
+            
             <h3>Álbum: Raza Magna (2025)</h3>
             <ol>
-                <li>Intron</li>
+                <li>Intro</li>
                 <li>Poder Oculto</li>
-                <li>Despertando a la vida</li>
+                <li>Despertando a la Vida</li>
                 <li>Reflexión</li>
                 <li>Rock N Roll</li>
                 <li>Polaris</li>
                 <li>Indigente</li>
-                <li>La tormenta</li>
+                <li>La Tormenta</li>
             </ol>
             
             <h3>Singles</h3>
@@ -68,103 +76,111 @@
                 <li>"Indigente" (2024)</li>
             </ul>
         </section>
-<hr>
+
         <!-- Integrantes -->
         <section id="integrantes">
-            <h2>La Cofradia</h2>
+            <h2>La Cofradía</h2>
             
-            <div>
-                <h3>Adolfo Elizondo</h3>
-                <p><strong>Lider y Guitarra</strong></p>
-                <p>El lider de la banda y fundador, sus riffs mezclan creatividad melodica con agresividad tecnica.</p>
-                <p><a href="adolfo.elizondo.html">Ver perfil completo →</a></p>
-            </div>
+            <div class="members-grid">
+                <div class="member-card">
+                    <h3>Adolfo Elizondo</h3>
+                    <strong>Líder y Guitarra</strong>
+                    <p>El líder de la banda y fundador, sus riffs mezclan creatividad melódica con agresividad técnica.</p>
+                    <a href="adolfo.elizondo.html">Ver perfil completo →</a>
+                </div>
 
-            <div>
-                <h3>Juan "Jota" Aragón</h3>
-                <p><strong>Bajo</strong></p>
-                <p>Aparte de sus lineas delirantes de bajo, es un excelente compositor </p>
-                <p><a href="jota.aragón.html">Ver perfil completo →</a></p>
-            </div>
+                <div class="member-card">
+                    <h3>Juan "Jota" Aragón</h3>
+                    <strong>Bajo</strong>
+                    <p>Aparte de sus líneas delirantes de bajo, es un excelente compositor.</p>
+                    <a href="jota.aragon.html">Ver perfil completo →</a>
+                </div>
 
-            <div>
-                <h3>Mike Carrión</h3>
-                <p><strong>Batería</strong></p>
-                <p>Con uan mezcla de ritmos y de peculiaridades, fomenta variedad</p>
-                <p><a href="mike.carrion.html">Ver perfil completo →</a></p>
-            </div>
+                <div class="member-card">
+                    <h3>Mike Carrión</h3>
+                    <strong>Batería</strong>
+                    <p>Con una mezcla de ritmos y peculiaridades, fomenta variedad.</p>
+                    <a href="mike.carrion.html">Ver perfil completo →</a>
+                </div>
 
-            <div>
-                <h3>David "Vampel" Mora</h3>
-                <p><strong>Voz</strong></p>
-                <p>Aunque tambien brinda poder y energia, la voz de Vampel tambien puede crear sentimiento con melodia</p>
-                <p><a href="vampel.mora.html">Ver perfil completo →</a></p>
+                <div class="member-card">
+                    <h3>David "Vampel" Mora</h3>
+                    <strong>Voz</strong>
+                    <p>Aunque también brinda poder y energía, la voz de Vampel también puede crear sentimiento con melodía.</p>
+                    <a href="vampel.mora.html">Ver perfil completo →</a>
+                </div>
             </div>
         </section>
-<hr>
+
         <!-- Videos/Galería -->
         <section id="media">
             <h2>Videos y Fotos</h2>
             
             <h3>Último Video</h3>
             <ul>
-                <li><a href="https://www.youtube.com/watch?v=47uD6FcuNAQ&list=RD47uD6FcuNAQ&start_radio=1">Indigente</a></li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=47uD6FcuNAQ&list=RD47uD6FcuNAQ&start_radio=1" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                       🎬 Indigente
+                    </a>
+                </li>
             </ul>
 
             <h3>Galería</h3>
-            <p>Algunas imágenes mas:</p>
-            <!-- Aquí luego agrego mas  -->
-            <img src="images/Raza-logo.jpeg" alt="logo" width="300">
-            
+            <p>Algunas imágenes más:</p>
+            <img src="images/Raza-logo.jpeg" alt="Raza Magna - Logo oficial" width="300">
         </section>
 
         <!-- Contacto -->
         <section id="contacto">
-              <form action="#" method="post">
-               <fieldset>
-               <legend>Únete al Clero</legend>
-                <div>
-                    <label  for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required size="20">
-                </div>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Únete al Clero</legend>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
 
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required size="20">
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                <div>
-                    <label for="asunto">Asunto:</label>
-                    <select id="asunto" name="asunto">
-                        <option value="colaboracion">Colaboración musical</option>
-                        <option value="produccion">Producción/Grabación</option>
-                        <option value="Musico">Soy Tecladista</option>
-                        <option value="Feedback">Feedback</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto:</label>
+                        <select id="asunto" name="asunto">
+                            <option value="colaboracion">Colaboración musical</option>
+                            <option value="produccion">Producción/Grabación</option>
+                            <option value="musico">Soy Tecladista</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Te escuchamos..."></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Te escuchamos..."></textarea>
+                    </div>
 
-                <div>
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <label for="newsletter">Quiero recibir noticias de la banda</label>
-                </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Quiero recibir noticias de la banda</label>
+                    </div>
 
-                <div>
-                    <p>¿Es la primera vez que nos escuchas?</p>
-                    <input type="radio" id="si" name="escucha" value="si">
-                    <label for="si">Si</label>
+                    <div class="form-group">
+                        <p>¿Es la primera vez que nos escuchas?</p>
+                        <div class="radio-group">
+                            <input type="radio" id="si" name="escucha" value="si">
+                            <label for="si">Sí</label>
 
-                    <input type="radio" id="no" name="escucha" value="no">
-                    <label for="no">No</label>
+                            <input type="radio" id="no" name="escucha" value="no">
+                            <label for="no">No</label>
+                        </div>
+                    </div>
 
-                </div>
-
-                <button class="submit" type="submit">¡Enviar Mensaje!</button>
+                    <button type="submit">¡Enviar Mensaje!</button>
                 </fieldset>
             </form>
         </section>  
@@ -175,16 +191,16 @@
         <p>&copy; 2025 Raza Magna. Todos los derechos reservados.</p>
         
         <div class="social-links">
-        <a href="https://www.facebook.com/p/Raza-Magna-61569363782268/" target="_blank">
-            <img src="images/facebook-logo.png" alt="Facebook">
-        </a>
-        <a href="https://www.youtube.com/@RazaMagnaOficial" target="_blank">
-            <img src="images/youtube-logo.png" alt="YouTube">
-        </a>
-        <a href="https://open.spotify.com/intl-es/artist/1V3VrQi4Gl3TM0EDzn6sMy" target="_blank">
-            <img src="images/spotify-logo.png" alt="Spotify">
-        </a>
-    </div>
+            <a href="https://www.facebook.com/p/Raza-Magna-61569363782268/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Raza Magna">
+                <img src="images/facebook-logo.png" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/@RazaMagnaOficial" target="_blank" rel="noopener noreferrer" aria-label="YouTube de Raza Magna">
+                <img src="images/youtube-logo.png" alt="YouTube">
+            </a>
+            <a href="https://open.spotify.com/intl-es/artist/1V3VrQi4Gl3TM0EDzn6sMy" target="_blank" rel="noopener noreferrer" aria-label="Spotify de Raza Magna">
+                <img src="images/spotify-logo.png" alt="Spotify">
+            </a>
+        </div>
     </footer>
 </body>
 </html>
